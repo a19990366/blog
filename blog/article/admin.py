@@ -9,6 +9,7 @@ class CommentModelAdmin(admin.ModelAdmin):
     list_filter = ['article', 'content']
     search_fields = ['content']
     list_editable = ['content']
+    readonly_fields = ['pubDateTime']
 
     class Meta:
         model = Comment
