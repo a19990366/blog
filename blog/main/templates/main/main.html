@@ -1,15 +1,6 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-  <head>
-    <title>部落格</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-  </head>
-  <body>
-    {% include 'main/menu.html' %}
-    <h2>Django 說 -- Hello world!</h2>
-    <p>{{ like }}</p>
-    <p>現在時間：{{ now|date:'Y-m-d H:i:s' }}</p>
-  </body>
-</html>
+{% extends 'main/base.html' %}
+{% block heading %}首頁{% endblock %}
+{% block content %}
+<p>{{ like }}</p>
+<p>現在時間：{{ now|date:'Y-m-d H:i:s' }}</p>
+{% endblock %}
